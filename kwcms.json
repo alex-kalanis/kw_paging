@@ -1,7 +1,7 @@
 {
   "author": "kalanis",
   "name": "kw_pager",
-  "description": "Shareable pager - render for HTML",
+  "description": "Shareable pager - render for HTML and Cli",
   "source": "https://github.com/alex-kalanis/kw_paging",
   "license": "BSD-3-Clause",
   "require": {

@@ -1,6 +1,6 @@
 {
   "name": "alex-kalanis/kw_paging",
-  "description": "Shareable pager - render for HTML",
+  "description": "Shareable pager - render for HTML and Cli",
   "keywords": [
     "pager",
     "render"
