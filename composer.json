@@ -8,7 +8,7 @@
   "license": "BSD-3-Clause",
   "type": "library",
   "require": {
-    "alex-kalanis/kw_pager": ">=1.0",
+    "alex-kalanis/pager": ">=1.0",
     "php": ">=7.2.0"
   },
   "require-dev": {
