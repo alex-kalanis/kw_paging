@@ -34,6 +34,14 @@ class DefaultPagerTest extends CommonTestClass
         ];
     }
 
+    public function testInstance(): void
+    {
+        $position = $this->getPositions();
+        $position->getPager()->setActualPage(4);
+        $pager = new Render\DefaultPager($position, new MockLink());
+        $this->assertInstanceOf('\kalanis\kw_pager\Interfaces\IPager', $pager->getPager());
+    }
+
     public function testMiddle(): void
     {
         $position = $this->getPositions();

@@ -3,7 +3,9 @@
 namespace kalanis\kw_paging\Render;
 
 
+use kalanis\kw_pager\Interfaces\IPager;
 use kalanis\kw_paging\Interfaces\ILink;
+use kalanis\kw_paging\Interfaces\IOutput;
 use kalanis\kw_paging\Interfaces\IPositions;
 
 
@@ -12,7 +14,7 @@ use kalanis\kw_paging\Interfaces\IPositions;
  * @package kalanis\kw_paging\Render
  * Simplified pager with less classes
  */
-class SimplifiedPager
+class SimplifiedPager implements IOutput
 {
     use TDisplayPages;
 
@@ -71,5 +73,10 @@ class SimplifiedPager
             $this->positions
         );
         return $this->pager->render();
+    }
+
+    public function getPager(): IPager
+    {
+        return $this->positions->getPager();
     }
 }

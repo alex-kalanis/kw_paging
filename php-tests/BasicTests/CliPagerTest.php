@@ -4,14 +4,19 @@ namespace BasicTests;
 
 
 use CommonTestClass;
-use kalanis\kw_paging\Positions;
 use kalanis\kw_paging\Render;
-use MockLink;
-use MockPager;
 
 
 class CliPagerTest extends CommonTestClass
 {
+    public function testInstance(): void
+    {
+        $position = $this->getPositions();
+        $position->getPager()->setActualPage(4);
+        $pager = new Render\CliPager($position);
+        $this->assertInstanceOf('\kalanis\kw_pager\Interfaces\IPager', $pager->getPager());
+    }
+
     public function testMiddle(): void
     {
         $position = $this->getPositions();

@@ -3,7 +3,9 @@
 namespace kalanis\kw_paging\Render;
 
 
+use kalanis\kw_pager\Interfaces\IPager;
 use kalanis\kw_paging\Interfaces\ILink;
+use kalanis\kw_paging\Interfaces\IOutput;
 use kalanis\kw_paging\Interfaces\IPositions;
 
 
@@ -13,7 +15,7 @@ use kalanis\kw_paging\Interfaces\IPositions;
  * Port of pager from running project. Not so nice, only basics here
  * Main problem is too many templates and some of them are not used
  */
-class DefaultPager
+class DefaultPager implements IOutput
 {
     use TDisplayPages;
 
@@ -66,5 +68,10 @@ class DefaultPager
             $this->positions
         );
         return $this->pager->render();
+    }
+
+    public function getPager(): IPager
+    {
+        return $this->positions->getPager();
     }
 }

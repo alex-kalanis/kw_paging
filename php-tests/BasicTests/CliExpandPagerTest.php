@@ -4,10 +4,7 @@ namespace BasicTests;
 
 
 use CommonTestClass;
-use kalanis\kw_paging\Positions;
 use kalanis\kw_paging\Render;
-use MockLink;
-use MockPager;
 
 
 class CliExpandPagerTest extends CommonTestClass

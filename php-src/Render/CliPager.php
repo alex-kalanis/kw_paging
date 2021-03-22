@@ -3,6 +3,8 @@
 namespace kalanis\kw_paging\Render;
 
 
+use kalanis\kw_pager\Interfaces\IPager;
+use kalanis\kw_paging\Interfaces\IOutput;
 use kalanis\kw_paging\Interfaces\IPositions;
 
 
@@ -11,7 +13,7 @@ use kalanis\kw_paging\Interfaces\IPositions;
  * @package kalanis\kw_paging\Render
  * Pager for displaying on CLI
  */
-class CliPager
+class CliPager implements IOutput
 {
     use TDisplayPages;
     use THelpingText;
@@ -46,5 +48,10 @@ class CliPager
         $pages[] = $this->positions->nextPageExists() ? $this->positions->getLastPage() . ' ' . static::NEXT_PAGE . static::NEXT_PAGE : static::NONE_PAGE . static::NONE_PAGE ;
 
         return implode(' | ', $pages) . PHP_EOL . $this->getFilledText($this->positions);
+    }
+
+    public function getPager(): IPager
+    {
+        return $this->positions->getPager();
     }
 }
