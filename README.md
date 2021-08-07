@@ -12,7 +12,7 @@ This is the mixed package - contains sever-side implementation in Python and PHP
 ```
 {
     "require": {
-        "alex-kalanis/kw_paging": "1.0"
+        "alex-kalanis/kw_paging": "1.1"
     }
 }
 ```
@@ -34,11 +34,11 @@ into your "setup.py":
 
 ```
     install_requires=[
-        'kw_pager',
+        'kw_paging',
     ]
 ```
 
 # Python Usage
 
-1.) Connect the "kw_paging\paging" into your app. When it came necessary
+1.) Connect the "kw_paging.paging" into your app. When it came necessary
 you can extends every library to comply your use-case; mainly your processing.
