@@ -20,7 +20,7 @@ class DefaultPagerTest extends CommonTestClass
     {
         $link = new MockLink();
         $link->setPageNumber($page);
-        $class->setData($link, strval($page));
+        $class->setData($link, $page);
         $this->assertEquals($code . PHP_EOL, $class->render());
     }
 
