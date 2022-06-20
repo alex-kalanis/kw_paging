@@ -28,7 +28,7 @@ class MockLink implements ILink
 
     public function getPageLink(): string
     {
-        return ($this->pageNum > 1) ? $this->link . $this->pageNum : $this->link ;
+        return (1 < $this->pageNum) ? $this->link . $this->pageNum : $this->link ;
     }
 }
 

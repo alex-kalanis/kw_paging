@@ -4,8 +4,6 @@ filter:
     - 'php-tests/_autoload.php'
     - 'php-tests/_bootstrap.php'
     - 'php-tests/data/*'
-    - 'kw_tests/*'
-    - 'kw_templates/*'
   paths: {  }
 
 build:
