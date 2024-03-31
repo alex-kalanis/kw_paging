@@ -8,15 +8,18 @@
   "license": "BSD-3-Clause",
   "type": "library",
   "require": {
-    "alex-kalanis/pager": ">=1.0",
-    "alex-kalanis/kw_templates": ">=2.0",
-    "php": ">=7.2.0"
+    "alex-kalanis/pager": ">=2.0 <3",
+    "alex-kalanis/kw_templates": ">=3.0 <4",
+    "php": ">=7.4.0"
   },
   "require-dev": {
+    "shipmonk/composer-dependency-analyser": "^1.4",
     "phpstan/phpstan": "^1.0",
     "phpstan/phpstan-phpunit": "^1.0",
     "friendsofphp/php-cs-fixer": "^3.0",
     "phpunit/phpunit": ">=7.2 <=9"
+  },
+  "suggest": {
   },
   "autoload": {
     "psr-4": {

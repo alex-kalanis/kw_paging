@@ -4,8 +4,8 @@ namespace BasicTests;
 
 
 use CommonTestClass;
-use kalanis\kw_paging\Render\THelpingText;
-use kalanis\kw_paging\Render\Translations;
+use kalanis\kw_paging\Traits\THelpingText;
+use kalanis\kw_paging\Translations;
 
 
 class BasicTest extends CommonTestClass
@@ -29,7 +29,7 @@ class BasicTest extends CommonTestClass
         $position->getPager()->setActualPage(4);
         $lib = new HelpingText();
         $this->assertEmpty($lib->getFilledText($position));
-        $lib->setLang(new Translations());
+        $lib->setKpgLang(new Translations());
         $this->assertNotEmpty($lib->getFilledText($position));
     }
 }

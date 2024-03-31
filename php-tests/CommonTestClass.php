@@ -18,8 +18,8 @@ class CommonTestClass extends \PHPUnit\Framework\TestCase
 
 class MockLink implements ILink
 {
-    protected $link = '/foo/bar/';
-    protected $pageNum = 0;
+    protected string $link = '/foo/bar/';
+    protected int $pageNum = 0;
 
     public function setPageNumber(int $page): void
     {
